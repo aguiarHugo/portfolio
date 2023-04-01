@@ -9,4 +9,9 @@
   color-scheme: dark;
 }
 
+a:hover,
+svg:hover {
+  color: #FDCC49;
+}
+
 
