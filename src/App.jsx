@@ -30,7 +30,7 @@ function App() {
          selectedPage={selectedPage}
          setSelectedPage ={setSelectedPage}
       />
-      <div className="mt-24 ml-4">
+      <div className="mt-24 md:ml-16">
         <Header />
         <About />
         <Techs />
