@@ -29,6 +29,7 @@ module.exports = {
           800: "#34235c",
           900: "#1a112e"
         },
+        yellow: "#FDCC49"
       },
       screens: {
         xs: "480px",
