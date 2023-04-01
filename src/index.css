@@ -9,6 +9,11 @@
   color-scheme: dark;
 }
 
+a,
+svg {
+  transition: .4s;
+}
+
 a:hover,
 svg:hover {
   color: #FDCC49;
