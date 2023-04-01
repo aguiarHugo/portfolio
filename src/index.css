@@ -9,6 +9,10 @@
   color-scheme: dark;
 }
 
+body {
+  background-color: #121214 ;
+}
+
 a,
 svg {
   transition: .4s;
