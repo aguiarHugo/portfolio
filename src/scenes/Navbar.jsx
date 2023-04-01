@@ -10,8 +10,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase()
   return(
     <AnchorLink
-    className={`${selectedPage === lowerCasePage ? "text-white" : ""}
-      hover:text-yellow transition duration-500`}
+    className={`${selectedPage === lowerCasePage ? "text-yellow" : "text-white"}`}
     href={`#${lowerCasePage}`}
     onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -28,7 +27,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <FaReact size={48}/>
+        <FaReact size={32}/>
 
         {/*DESKTOP */ }
         {isAboveSmallScreens ? (
