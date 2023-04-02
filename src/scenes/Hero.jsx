@@ -50,7 +50,7 @@ const Hero = ({ setSelectedPage }) => {
               visible: { opacity:1, x:0 }
             }}
           >
-            <p className="text-6xl font-playfair z-10 text-center md:text-start">
+            <p className="text-6xl text-center md:text-start font-bold">
               Hugo <span className="text-purple-400">Aguiar</span>
             </p>
 
@@ -83,12 +83,12 @@ const Hero = ({ setSelectedPage }) => {
                 onClick={() => setSelectedPage("contact")}
                 href="#contact"
               >
-                <div
+                <AnchorLink
                   className=" text-purple-400 w-full h-full flex 
-                  items-center justify-center px-10"
+                  items-center justify-center px-10 shadow-[0px_10px_20px_1px_#9f7aea]"
                 >
                   Send me a message!
-                </div>
+                </AnchorLink>
               </AnchorLink>
             </motion.div>
             <motion.div
