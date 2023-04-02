@@ -35,6 +35,7 @@ function App() {
         <About />
       <div id="techs" className="h-16" />
         <Techs />
+        <div id="projects" className="h-16" />
         <Projects />
         <Contact />
       </div>
