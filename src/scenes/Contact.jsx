@@ -61,7 +61,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false)
-          alert("Muito obrigado! Entrarei em contato com você assim que possível!")
+          alert("Thanks for your message! I'll answers you asap!")
 
           setForm({
             name: "",
@@ -73,7 +73,7 @@ const Contact = () => {
           setLoading(false)
           console.error(error)
 
-          alert("Ahh, algo deu errado, tente novamente.")
+          alert("Ahh, something went wrong, please try again.")
         }
       )
   }
@@ -130,7 +130,7 @@ return (
           type='submit'
           className='py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md duration-500 hover:bg-purple-300'
         >
-          {loading ? "Enviando..." : "Enviar"}
+          {loading ? "Sending..." : "Send"}
         </button>
       </form>
     </motion.div>
