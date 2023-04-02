@@ -37,6 +37,7 @@ function App() {
         <Techs />
         <div id="projects" className="h-16" />
         <Projects />
+        <div id="contact" className="h-16" />
         <Contact />
       </div>
     </div>

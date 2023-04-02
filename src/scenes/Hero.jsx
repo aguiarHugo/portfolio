@@ -2,7 +2,6 @@ import useMediaQuery from "../hooks/useMediaQuery"
 import { motion } from "framer-motion"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
-import ai from '../assets/ai.jpg'
 import me from '../assets/eu.webp'
 import SocialMedia from "../components/SocialMedia"
 
