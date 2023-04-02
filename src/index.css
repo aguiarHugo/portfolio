@@ -23,4 +23,15 @@ svg:hover {
   color: #FDCC49;
 }
 
+#astronaut {
+  animation: animate 2s infinite ease alternate;
+}
+
+@keyframes animate {
+  to {
+    transform: translateY(30px);
+    ;
+  }
+}
+
 
