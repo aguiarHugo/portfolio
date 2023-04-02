@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import useMediaQuery from "../hooks/useMediaQuery";
+import { motion } from "framer-motion";
 
 import { AiOutlineClose } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -22,10 +23,11 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false)
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
-  const navbarBackground = isTopOfPage ? "" : "bg-purple-400"
+  const navbarBackground = isTopOfPage ? "bg-dark-500" : "bg-purple-400"
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav
+      className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <FaReact size={32}/>
 
@@ -80,18 +82,19 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 </div>
 
                 {/* MENU ITEMS */}
-                <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                <div 
+                  className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue"
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                >
                   <Link 
                     page="Home"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
-
                   />
                   <Link 
                     page="About"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
-
                   />
                   <Link 
                     page="Techs"
