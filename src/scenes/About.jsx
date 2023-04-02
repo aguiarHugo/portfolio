@@ -17,8 +17,8 @@ const About = () => {
           visible: { opacity:1, x:0 }
         }}
       >
-        <h3 className="text-6xl font-bold text-center md:text-start">
-          Who  <span className="text-purple-400">Am I?</span>
+        <h3 className="text-6xl font-bold md:text-start">
+          Who <span className="text-purple-400">Am I?</span>
         </h3>
         <p className="mt-4">
           I'm a 30 year old man that lives in Brazil, who recently left behind a military career to start coding.
