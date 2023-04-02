@@ -23,7 +23,7 @@ svg:hover {
   color: #FDCC49;
 }
 
-#astronaut {
+.animate {
   animation: animate 2s infinite ease alternate;
 }
 
