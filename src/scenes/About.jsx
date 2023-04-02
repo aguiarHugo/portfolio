@@ -4,7 +4,7 @@ import astronaut from '../assets/astronaut.png'
 
 const About = () => {
   return (
-    <section id="about" className="flex flex-col md:flex-row justify-between items-center">
+    <section id="about" className="flex flex-col md:flex-row justify-between items-center px-6">
       <img className='animate' src={astronaut} alt="Astronaut" />
       <motion.div
         className='text-center md:w-[600px] md:text-start md:mr-16'

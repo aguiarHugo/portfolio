@@ -37,9 +37,7 @@ const Hero = ({ setSelectedPage }) => {
             />
         )}
         </div>
-        {/* MAIN SECTION */}
         <div className="z-30 basis 2/5 mt-12 md:mt-30">
-          {/* HEADINGS */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -59,37 +57,36 @@ const Hero = ({ setSelectedPage }) => {
             </p>
           </motion.div>
 
-          {/* CALL TO ACTION */}
-            <motion.div
-              className="flex mt-5 justify-center md:justify-start"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5}}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              variants={{ 
-               hidden: { opacity:0, x:-50 },
-               visible: { opacity:1, x:0 }
-             }}
+          <motion.div
+            className="flex mt-5 justify-center md:justify-start"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5}}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{ 
+              hidden: { opacity:0, x:-50 },
+              visible: { opacity:1, x:0 }
+            }}
+          >
+            <AnchorLink
+              className="bg-purple-400 text-bg-dark rounded-sm py-3 px-7 font-semibold"
+              onClick={() => setSelectedPage("contact")}
+              href="#contact"
             >
-              <AnchorLink
-                className="bg-purple-400 text-bg-dark rounded-sm py-3 px-7 font-semibold"
-                onClick={() => setSelectedPage("contact")}
-                href="#contact"
+              Contact
+            </AnchorLink>
+            <AnchorLink
+              className="rounded-r-sm border border-purple-400 py-0.5 pr-0.5"
+              onClick={() => setSelectedPage("contact")}
+              href="#contact"
+            >
+              <p
+                className=" text-purple-400 w-full h-full flex 
+                items-center justify-center px-10 shadow-[0px_10px_20px_1px_#9f7aea] duration-500 hover:text-yellow"
               >
-                Contact
-              </AnchorLink>
-              <AnchorLink
-                className="rounded-r-sm border border-purple-400 py-0.5 pr-0.5"
-                onClick={() => setSelectedPage("contact")}
-                href="#contact"
-              >
-                <AnchorLink
-                  className=" text-purple-400 w-full h-full flex 
-                  items-center justify-center px-10 shadow-[0px_10px_20px_1px_#9f7aea]"
-                >
-                  Send me a message!
-                </AnchorLink>
-              </AnchorLink>
+                Send me a message!
+              </p>
+            </AnchorLink>
             </motion.div>
             <motion.div
              className="flex mt-5 justify-center md:justify-start"
