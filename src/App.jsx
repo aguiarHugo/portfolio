@@ -33,6 +33,7 @@ function App() {
       <div className="mt-24 md:ml-24">
         <Header />
         <About />
+      <div id="techs" className="h-16" />
         <Techs />
         <Projects />
         <Contact />
