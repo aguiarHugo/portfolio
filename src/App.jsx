@@ -3,7 +3,7 @@ import useMediaQuery from "./hooks/useMediaQuery";
 
 import About from "./scenes/About"
 import Contact from "./scenes/Contact"
-import Header from "./scenes/Hero"
+import Hero from "./scenes/Hero"
 import Navbar from "./scenes/Navbar"
 import Projects from "./scenes/Projects"
 import Techs from "./scenes/Techs"
@@ -31,7 +31,8 @@ function App() {
          setSelectedPage ={setSelectedPage}
       />
       <div className="mt-24 md:ml-24">
-        <Header />
+      <div id="home" className="h-16" />
+        <Hero />
         <About />
       <div id="techs" className="h-16" />
         <Techs />

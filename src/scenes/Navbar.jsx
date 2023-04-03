@@ -1,11 +1,11 @@
 import { useState } from "react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import useMediaQuery from "../hooks/useMediaQuery";
-import { motion } from "framer-motion";
-
 import { AiOutlineClose } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { FaReact } from 'react-icons/fa'
+
+import logo from '../assets/logo.png'
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase()
@@ -29,9 +29,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     <nav
       className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <FaReact 
-          className="cursor-pointer"
-          size={32}
+        <img
+          className="cursor-pointer w-[100px]"
+          src={logo}
+          alt="Logo"
           onClick={() => {
             setSelectedPage('')
             window.scrollTo(0, 0,)
