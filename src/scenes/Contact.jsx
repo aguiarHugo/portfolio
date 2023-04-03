@@ -29,54 +29,53 @@ const Contact = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+const handleChange = (e) => {
+  const { target } = e;
+  const { name, value } = target;
 
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
+  setForm({
+    ...form,
+    [name]: value,
+  });
+};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Hugo Aguiar",
-          from_email: form.email,
-          to_email: "aguiarhugofx@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false)
-          alert("Thanks for your message! I'll answers you asap!")
+emailjs
+  .send(
+    import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+    {
+      from_name: form.name,
+      to_name: "Hugo Aguiar",
+      from_email: form.email,
+      to_email: "aguiarhugofx@gmail.com",
+      message: form.message,
+    },
+    import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+  )
+  .then(
+    () => {
+      setLoading(false)
+      alert("Thanks for your message! I'll answers you asap!")
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          })
-        },
-        (error) => {
-          setLoading(false)
-          console.error(error)
-
-          alert("Ahh, something went wrong, please try again.")
-        }
-      )
-  }
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      })
+    },
+    (error) => {
+      setLoading(false)
+      console.error(error)
+      alert("Ahh, something went wrong, please try again.")
+    }
+  )
+}
 
 return (
   <section

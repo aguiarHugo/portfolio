@@ -32,7 +32,7 @@ const ProjectsCard = ({ i, index, name, description, tags, image, source_code_li
       scale: 1,
       speed: 450,
     }}
-    className='bg-dark-700 p-5 rounded-2xl sm:w-[360px] w-full border border-purple-400'
+    className='bg-dark-700 p-5 rounded-2xl sm:w-[360px] min-h-[430px] w-full border border-purple-400'
   >
     <div className='relative w-full h-[230px] '>
       <img
