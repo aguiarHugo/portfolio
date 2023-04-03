@@ -108,6 +108,20 @@ svg:hover {
   -webkit-text-fill-color: transparent;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;             
+}
+
+body::-webkit-scrollbar-track {
+  background:#121214;        
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #121214;    
+  border-radius: 20px;       
+  border: 2px solid #8257e5;  
+}
+
 
 @keyframes animate {
   to {
