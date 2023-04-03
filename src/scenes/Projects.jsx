@@ -22,7 +22,7 @@ const Projects = () => {
           <span className='text-purple-400'>Pro</span>jects
         </h3>
       </motion.div>
-      <div className='mt-20 flex flex-wrap justify-center gap-7 border-solid border-purple'>
+      <div className='mt-20 flex flex-wrap justify-center px-2 gap-7 border-solid border-purple'>
         {projects.map((project, index) => (
           <ProjectsCard key={`project-${index}`} index={index} {...project} />
         ))}
