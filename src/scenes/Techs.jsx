@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
+import { Tilt } from 'react-tilt'
 
 import TechsCard from "../components/TechsCard"
 
 const Techs = () => {
   return (
-    <section className="flex flex-col md:flex-row gap-16 items-center mt-12">
+    <section className="flex flex-col md:flex-row md:justify-between gap-16 items-center mt-12">
       <motion.div
         className='text-center md:w-[600px] md:text-start md:ml-16'
         initial="hidden"
@@ -26,9 +27,17 @@ const Techs = () => {
           Although, I'm always open to learn new ones!
         </p>
       </motion.div>
-      <div className='md:w-[600px] animate'>
+      <Tilt
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+      >
+      <div className='md:w-[600px] md:mr-16 animate'>
         <TechsCard />
       </div>
+      </Tilt>
     </section>
   )
 }
