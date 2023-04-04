@@ -49,7 +49,7 @@ const ProjectsCard = ({ i, index, name, description, tags, image, source_code_li
           <img
             src={github}
             alt='source code'
-            className='w-1/2 h-1/2 object-contain '
+            className='w-1/2 h-1/2 object-contain bg-dark-600 rounded-full'
           />
         </div>
       </div>
