@@ -127,11 +127,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+
 @keyframes animate {
   to {
     transform: translateY(30px);
     ;
   }
 }
-
-
