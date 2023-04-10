@@ -3,7 +3,6 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import useMediaQuery from "../hooks/useMediaQuery";
 import { AiOutlineClose } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { FaReact } from 'react-icons/fa'
 
 import logo from '../assets/logo.png'
 
@@ -22,8 +21,15 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
   const navbarBackground = isTopOfPage ? "bg-dark-500" : "bg-purple-400"
+
+  const toggleMenu = () => {
+    setIsAnimating(!isMenuToggled);
+    setIsMenuToggled(!isMenuToggled);
+  }
+
 
   return (
     <nav
@@ -71,26 +77,26 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : (
             <button 
-            className="rounded-full bg-purple-400 p-2"
-            onClick={() => setIsMenuToggled(!isMenuToggled)}
+            className={"rounded-full bg-purple-400 p-2"}
+            onClick={toggleMenu}
             >
               <GiHamburgerMenu size={24} /> 
             </button>)}
 
             {/* MOBILE BUTTON POPUP*/}
             {!isAboveSmallScreens && isMenuToggled && (
-              <div className="fixed right-0 bottom-0 h-full bg-purple-400 w-[300px]">
+              <div className={`fixed right-0 bottom-0 h-full bg-purple-400 w-full ${isAnimating ? "menu-slideFromTop" : ""} `}>
                 {/* CLOSE ICON */}
                 <div className="flex justify-end p-12">
                   <button
                   onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                    <AiOutlineClose size={24} />
+                  <AiOutlineClose size={24} />
                   </button>
                 </div>
 
                 {/* MENU ITEMS */}
                 <div 
-                  className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue"
+                  className="flex flex-col gap-10 items-center text-2xl "
                   onClick={() => setIsMenuToggled(!isMenuToggled)}
                 >
                   <Link 
