@@ -17,7 +17,7 @@ const Techs = () => {
           visible: { opacity:1, x:0 }
         }}
       >
-        <h3 className="text-5xl md:text-6xl font-bold md:text-start">
+        <h3 className="text-6xl md:text-6xl font-bold md:text-start">
          <span className="text-purple-400">Tech</span>nologies
         </h3>
         <p className="mt-4">
