@@ -1,12 +1,45 @@
-import github from '../assets/github.png'
 import dashboard from '../assets/dashboard.png'
 import gpt3 from '../assets/gpt3.png'
 import jsf from '../assets/jsf.png'
 import premiada from '../assets/premiada.png'
 import restaurant from '../assets/restaurant.png'
 import rocketnotes from '../assets/rocketnotes.png'
+import shirt from '../assets/3dshirt.png'
 
 export const projects = [
+  {
+    name: "3D Shirt Customizer",
+    description:
+      "You can Customize your shirt with your own images or ask AI to generate one for you!",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+    ],
+    image: shirt,
+    source_code_link: "https://github.com/aguiarHugo/AI-Powered-3D-Website-Client",
+  },
   {
     name: "Finance Dashboard",
     description:
