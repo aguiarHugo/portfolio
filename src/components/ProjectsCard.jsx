@@ -1,38 +1,26 @@
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Tilt } from 'react-tilt'
 
 import github from '../assets/github.png'
 
-const fadeIn = (direction, type, delay, duration) => {
-  return {
-    hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-      opacity: 0,
-    },
-    show: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
-        ease: "easeOut",
-      },
-    },
-  };
-};
-
 const ProjectsCard = ({ i, index, name, description, tags, image, source_code_link }) => (
-  <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+
+  <motion.div 
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.4}}
+    transition={{ duration: 0.4 }}
+    variants={{ 
+      hidden: { opacity:0, y:-50 },
+      visible: { opacity:1, y:0 }
+  }}>
   <Tilt
     options={{
       max: 45,
       scale: 1,
       speed: 450,
     }}
-    className='bg-dark-700 p-5 rounded-2xl sm:w-[360px] min-h-[430px] w-full border border-purple-400'
+    className='bg-dark-700 p-5 rounded-2xl sm:w-[360px] min-h-[460px] w-full border border-purple-400'
   >
     <div className='relative w-full h-[230px] '>
       <img
