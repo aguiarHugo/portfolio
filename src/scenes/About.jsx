@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="flex flex-col md:flex-row md:justify-between items-center px-6">
       <img 
-      className='animate drop-shadow-4xl' 
+      className='animate drop-shadow-astronaut' 
       src={astronaut} 
       alt="Astronaut" />
       <motion.div
