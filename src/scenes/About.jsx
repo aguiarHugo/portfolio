@@ -4,7 +4,7 @@ import astronaut from '../assets/astronaut.png'
 
 const About = () => {
   return (
-    <section id="about" className="flex flex-col md:flex-row md:justify-between items-center px-6">
+    <section className="flex flex-col md:flex-row md:justify-between items-center px-6">
       <img className='animate' src={astronaut} alt="Astronaut" />
       <motion.div
         className='text-center md:w-[570px] md:text-start md:mr-16'
@@ -21,12 +21,27 @@ const About = () => {
           Who <span className="text-purple-400">Am I?</span>
         </h3>
         <p className="mt-4">
-          I'm a 30 year old man that lives in Brazil, who recently left behind a military career to start coding.
-          I love to watch animes and play games, most of them on Xbox. Either in games or coding, I'm a <span className='text-purple-300'>Team Player </span>and a <span className='text-purple-300'>Quick Learner</span>. 
+          My name is Hugo, I am 30 years old, and I have a solid professional experience in web development. 
+          In addition, I served in the Brazilian Navy for 9 years and 8 months, which provided me with valuable skills 
+          in leadership, teamwork, and problem-solving.
         </p>
-        <p>
-          Currently in love with <span className='text-purple-300'>ReactJs</span>, everyday learning news ways to solve problems!
+        <p className="mt-4">
+          After my service in the Brazilian Navy, I transitioned to web development, where I have been working as 
+          a developer on different projects. During this time, I have developed skills in HTML, CSS, Bootstrap, 
+          Tailwindcss, styled-components, JavaScript, and ReactJs.
         </p>
+        <p className="mt-4">
+          I continue to update myself with courses and trainings related to my field of expertise, constantly 
+          seeking to improve my technical skills and knowledge. I possess technical skills in web programming, 
+          including the use of frameworks such as ReactJs, as well as experience in SQL databases. Furthermore, my 
+          experience in the Brazilian Navy has provided me with skills in leadership, teamwork, project management, and problem-solving, 
+          allowing me to approach projects holistically and efficiently. In addition to my passion for web 
+          development, I am interested in technological innovation, information security, and machine learning.
+        </p>
+        <p className="mt-4">
+          As a web developer, I am committed to providing high-quality technical solutions and adding value to the projects I work on. I am always seeking learning and continuous growth, and I am available to contribute to challenging and innovative projects in the field. 
+        </p>
+        
       </motion.div>
     </section>
   )

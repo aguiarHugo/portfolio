@@ -31,8 +31,9 @@ function App() {
          setSelectedPage ={setSelectedPage}
       />
       <div className="mt-24 md:ml-24">
-      <div id="home" className="h-16" />
+      <div id="home" className="h-12" />
         <Hero />
+      <div id="about" className="h-16 md:h-32" />
         <About />
       <div id="techs" className="h-16" />
         <Techs />
