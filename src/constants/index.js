@@ -5,8 +5,26 @@ import premiada from '../assets/premiada.png'
 import restaurant from '../assets/restaurant.png'
 import rocketnotes from '../assets/rocketnotes.png'
 import shirt from '../assets/3dshirt.png'
+import diablo4 from '../assets/diablo4.png'
 
 export const projects = [
+  {
+    name: "Game blog",
+    description:
+      "Diablo 4 game blog fully design and developed by me",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: diablo4,
+    source_code_link: "https://github.com/aguiarHugo/diablo4-game-blog",
+  },
   {
     name: "3D Shirt Customizer",
     description:
