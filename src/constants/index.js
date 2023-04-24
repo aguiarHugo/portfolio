@@ -6,8 +6,30 @@ import restaurant from '../assets/restaurant.png'
 import rocketnotes from '../assets/rocketnotes.png'
 import shirt from '../assets/3dshirt.png'
 import diablo4 from '../assets/diablo4.png'
+import sumz from '../assets/sumz.png'
 
 export const projects = [
+  {
+    name: "Sumz",
+    description:
+      "Summarize Articles with OpenAI GPT-4",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+    ],
+    image: sumz,
+    source_code_link: "https://github.com/aguiarHugo/Summize",
+  },
   {
     name: "Game blog",
     description:
