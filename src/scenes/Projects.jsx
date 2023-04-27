@@ -6,7 +6,7 @@ import ProjectsCard  from '../components/ProjectsCard'
 
 const Projects = () => {
   return (
-    <section className='mt-16'>
+    <section>
       <motion.div
         className='flex justify-center items-center'
         initial="hidden"

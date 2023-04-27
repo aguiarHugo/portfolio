@@ -60,7 +60,7 @@ emailjs
 
 return (
   <section
-    className=" flex xl:flex-row flex-col-reverse gap-10 overflow-hidden mt-16"
+    className=" flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"
   >
     <motion.div
       initial="hidden"
