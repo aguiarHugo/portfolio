@@ -1,9 +1,10 @@
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { Tilt } from 'react-tilt'
 
 import github from '../assets/github.png'
+import play from '../assets/play-icon.png'
 
-const ProjectsCard = ({ i, index, name, description, tags, image, source_code_link }) => (
+const ProjectsCard = ({ name, description, tags, image, source_code_link, live_project_link }) => (
 
   <motion.div 
     initial="hidden"
@@ -20,7 +21,7 @@ const ProjectsCard = ({ i, index, name, description, tags, image, source_code_li
       scale: 1,
       speed: 450,
     }}
-    className='bg-dark-700 p-5 rounded-2xl sm:w-[360px] min-h-[460px] w-full border border-purple-400'
+    className='bg-dark-700 p-5 rounded-2xl sm:w-[360px] min-h-[460px] max-w-[400px] w-full border border-purple-400'
   >
     <div className='relative w-full h-[230px] '>
       <img
@@ -28,7 +29,7 @@ const ProjectsCard = ({ i, index, name, description, tags, image, source_code_li
         alt='project_image'
         className='w-full h-full object-contain rounded-2xl'
       />
-
+      
       <div className=' absolute inset-0 flex justify-end card-img_hover'>
         <div
           onClick={() => window.open(source_code_link, "_blank")}
@@ -38,6 +39,16 @@ const ProjectsCard = ({ i, index, name, description, tags, image, source_code_li
             src={github}
             alt='source code'
             className='w-1/2 h-1/2 object-contain bg-dark-600 rounded-full'
+          />
+        </div>
+        <div
+          onClick={() => window.open(live_project_link, "_blank")}
+          className='w-16 h-16 rounded-full flex justify-center cursor-pointer'
+        >
+          <img
+            src={play}
+            alt='source code'
+            className='w-1/2 h-1/2 object-contain bg-white border-2 border-solid border-black rounded-full'
           />
         </div>
       </div>
