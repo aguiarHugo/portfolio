@@ -35,11 +35,11 @@ function App() {
         <Hero />
       <div id="about" className="h-16 md:h-32" />
         <About />
-      <div id="techs" className="h-16" />
+      <div id="techs" className="h-32" />
         <Techs />
-        <div id="projects" className="h-16 md:h-40" />
+        <div id="projects" className="h-32" />
         <Projects />
-        <div id="contact" className="h-16" />
+        <div id="contact" className="h-32" />
         <Contact />
       </div>
     </div>
