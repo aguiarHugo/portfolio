@@ -29,6 +29,7 @@ export const projects = [
     ],
     image: sumz,
     source_code_link: "https://github.com/aguiarHugo/Summize",
+    live_project_link: "https://summize-article.netlify.app/"
   },
   {
     name: "Game blog",
@@ -46,6 +47,7 @@ export const projects = [
     ],
     image: diablo4,
     source_code_link: "https://github.com/aguiarHugo/diablo4-game-blog",
+    live_project_link: "https://d4fan.netlify.app/"
   },
   {
     name: "3D Shirt Customizer",
@@ -79,6 +81,7 @@ export const projects = [
     ],
     image: shirt,
     source_code_link: "https://github.com/aguiarHugo/AI-Powered-3D-Website-Client",
+    live_project_link: "https://3d-shirt-customizer.netlify.app/"
   },
   {
     name: "Finance Dashboard",
@@ -108,6 +111,7 @@ export const projects = [
     ],
     image: dashboard,
     source_code_link: "https://github.com/aguiarHugo/Finance-Dashboard-client",
+    live_project_link: "https://mern-finance-dashboard.netlify.app/"
   },
   {
     name: "JSF",
@@ -125,6 +129,7 @@ export const projects = [
     ],
     image: jsf,
     source_code_link: "https://github.com/aguiarHugo/Jsf-contabilidade",
+    live_project_link: "https://jsfhugo.netlify.app/"
   },
   {
     name: "Premiada",
@@ -146,6 +151,7 @@ export const projects = [
     ],
     image: premiada,
     source_code_link: "https://github.com/aguiarHugo/Premiada-LandingPage",
+    live_project_link: "https://premiada.netlify.app/"
   },
   {
     name: "Rocketnotes",
@@ -167,6 +173,7 @@ export const projects = [
     ],
     image: rocketnotes,
     source_code_link: "https://github.com/aguiarHugo/Rocket-Notes",
+    live_project_link: "https://rocketnotes-web.vercel.app/"
   },
   {
     name: "Gerícht",
@@ -184,6 +191,7 @@ export const projects = [
     ],
     image: restaurant,
     source_code_link: "https://github.com/aguiarHugo/restaurant-ui",
+    live_project_link: "https://restaurant-ui-react.netlify.app/"
   },
   {
     name: "GPT3",
@@ -201,5 +209,6 @@ export const projects = [
     ],
     image: gpt3,
     source_code_link: "https://github.com/aguiarHugo/GPT3",
+    live_project_link: "https://ui-gpt3.netlify.app/"
   },
 ];
