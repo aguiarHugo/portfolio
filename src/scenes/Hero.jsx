@@ -104,7 +104,7 @@ const Hero = ({ setSelectedPage }) => {
             </AnchorLink>
             </motion.div>
             <motion.div
-             className="flex mt-5 justify-center md:justify-start"
+             className="flex mt-5 justify-center"
              initial="hidden"
              whileInView="visible"
              viewport={{ once: true, amount: 0.5}}
