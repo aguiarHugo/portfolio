@@ -5,9 +5,9 @@ import TechsCard from "../components/TechsCard"
 
 const Techs = () => {
   return (
-    <section className="flex flex-col md:flex-row md:justify-between gap-16 items-center mt-12">
+    <section className="flex flex-col gap-20 items-center">
       <motion.div
-        className='text-center md:w-[600px] md:text-start md:ml-16'
+        className='text-center md:w-[600px]'
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5}}
@@ -17,7 +17,7 @@ const Techs = () => {
           visible: { opacity:1, x:0 }
         }}
       >
-        <h3 className="text-5xl md:text-6xl font-bold md:text-start">
+        <h3 className="text-5xl md:text-6xl font-bold">
          <span className="text-purple-400">Tech</span>nologies
         </h3>
         <p className="mt-4">
@@ -27,17 +27,10 @@ const Techs = () => {
           Although, I'm always open to learn new ones!
         </p>
       </motion.div>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-      >
-      <div className='md:w-[600px] md:mr-16 animate'>
+      
+      <div className='md:w-[600px] animate'>
         <TechsCard />
       </div>
-      </Tilt>
     </section>
   )
 }
