@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+const Contact = ({setSelectedPage}) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -60,9 +60,11 @@ emailjs
 
 return (
   <section
-    className=" flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"
+    id="contact"
+    className=" flex xl:flex-row flex-col-reverse gap-10 overflow-hidden pt-12 sm:pt-32"
   >
     <motion.div
+      onViewportEnter={() => setSelectedPage('contact')}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.4}}

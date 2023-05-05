@@ -8,16 +8,34 @@ import logo from '../assets/logo.png'
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase()
-  return(
-    <AnchorLink
-    className={`${selectedPage === lowerCasePage ? "text-yellow" : "text-white"}`}
-    href={`#${lowerCasePage}`}
-    onClick={() => setSelectedPage(lowerCasePage)}
-    >
-      {page}
-    </AnchorLink>
-  )
+
+  if (page === 'Home') {
+    return (
+      <AnchorLink
+        className={`${selectedPage === lowerCasePage ? "text-yellow" : "text-white"}`}
+        href={`#${lowerCasePage}`}
+        onClick={() => {
+          setSelectedPage(lowerCasePage)
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }}
+      >
+        {page}
+      </AnchorLink>
+    )
+  } else {
+    return(
+      <AnchorLink
+      className={`${selectedPage === lowerCasePage ? "text-yellow" : "text-white"}`}
+      href={`#${lowerCasePage}`}
+      onClick={() => setSelectedPage(lowerCasePage)}
+      >
+        {page}
+      </AnchorLink>
+    )
+  }
 }
+
+  
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false)
@@ -40,7 +58,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           src={logo}
           alt="Logo"
           onClick={() => {
-            setSelectedPage('')
+            setSelectedPage('home')
             window.scrollTo(0, 0,)
         }}
         />
@@ -48,31 +66,30 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
             <Link 
-            page="Home"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
+              page="Home"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
             />
-             <Link 
-            page="About"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
+            <Link 
+              page="About"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
 
             />
-             <Link 
-            page="Techs"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-
+            <Link 
+              page="Techs"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link 
+              page="Projects"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
             />
              <Link 
-            page="Projects"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-            />
-             <Link 
-            page="Contact"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
+              page="Contact"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
             />
           </div>
         ) : (

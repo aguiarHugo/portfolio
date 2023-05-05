@@ -3,10 +3,14 @@ import { Tilt } from 'react-tilt'
 
 import TechsCard from "../components/TechsCard"
 
-const Techs = () => {
+const Techs = ({setSelectedPage}) => {
   return (
-    <section className="flex flex-col gap-20 items-center">
+    <section 
+      id='techs'
+      className="flex flex-col gap-20 items-center pt-32"
+    >
       <motion.div
+        onViewportEnter={() => setSelectedPage('techs')}
         className='text-center md:w-[600px]'
         initial="hidden"
         whileInView="visible"

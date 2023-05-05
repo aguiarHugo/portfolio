@@ -2,9 +2,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import astronaut from '../assets/astronaut.png'
 
-const About = () => {
+const About = ({setSelectedPage}) => {
   return (
-    <section className="flex flex-col md:flex-row md:justify-between items-center px-6">
+    <section 
+      id='about'
+      className="flex flex-col md:flex-row md:justify-between items-center sm:pt-32 px-6"
+    >
+    <motion.div onViewportEnter={() => setSelectedPage('about')} />
       <img 
       className='animate drop-shadow-astronaut' 
       src={astronaut} 

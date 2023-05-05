@@ -31,16 +31,11 @@ function App() {
          setSelectedPage ={setSelectedPage}
       />
       <div className="mt-24 md:ml-24">
-      <div id="home" className="h-12" />
-        <Hero />
-      <div id="about" className="h-16 md:h-32" />
-        <About />
-      <div id="techs" className="h-32" />
-        <Techs />
-        <div id="projects" className="h-32" />
-        <Projects />
-        <div id="contact" className="h-32" />
-        <Contact />
+        <Hero setSelectedPage={setSelectedPage}/>
+        <About setSelectedPage={setSelectedPage} />
+        <Techs setSelectedPage={setSelectedPage} />
+        <Projects setSelectedPage={setSelectedPage} />
+        <Contact setSelectedPage={setSelectedPage} />
       </div>
     </div>
   )

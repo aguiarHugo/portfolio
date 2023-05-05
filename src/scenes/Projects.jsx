@@ -4,10 +4,11 @@ import { motion } from 'framer-motion'
 
 import ProjectsCard  from '../components/ProjectsCard'
 
-const Projects = () => {
+const Projects = ({setSelectedPage}) => {
   return (
-    <section>
+    <section id='projects' className='pt-32'>
       <motion.div
+        onViewportEnter={() => setSelectedPage('projects')}
         className='flex justify-center items-center'
         initial="hidden"
         whileInView="visible"

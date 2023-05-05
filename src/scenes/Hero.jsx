@@ -11,10 +11,14 @@ const Hero = ({ setSelectedPage }) => {
 
   return (
     <section 
-    id="home" 
-    className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
+      id="home" 
+      className="md:flex md:justify-around md:items-center md:h-full gap-16"
+    >
 
-      <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
+      <motion.div
+       className="md:order-2 flex z-10 mt-32"
+       onViewportEnter={() => setSelectedPage('home')}
+      >
         {isAboveMediumScreens ? (
           <motion.div
             initial="hidden"
@@ -46,12 +50,12 @@ const Hero = ({ setSelectedPage }) => {
               hidden: { opacity:0 },
               visible: { opacity:1 }
             }}
-              className="mb-4 rounded-t-[100px] hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[400px]"
+              className="mx-auto mb-4 border-2 border-solid border-purple-500 hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[400px]"
               alt="Hugo Aguiar profile pic"
               src={me} 
             />
         )}
-        </div>
+        </motion.div>
         <div className="z-30 basis 2/5 mt-12 md:mt-30">
           <motion.div
             initial="hidden"
