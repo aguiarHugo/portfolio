@@ -90,6 +90,7 @@ return (
             onChange={handleChange}
             placeholder="What is your name?"
             className='bg-purple-400 py-4 px-6 placeholder:text-purple-200 text-white rounded-lg outline-none border-none font-medium'
+            required
           />
         </label>
         <label className='flex flex-col'>
@@ -101,6 +102,7 @@ return (
             onChange={handleChange}
             placeholder="What is your e-mail?"
             className='bg-purple-400 py-4 px-6 placeholder:text-purple-200 text-white rounded-lg outline-none border-none font-medium'
+            required
           />
         </label>
         <label className='flex flex-col'>
@@ -112,6 +114,7 @@ return (
             onChange={handleChange}
             placeholder='Enter your message'
             className='bg-purple-400 py-4 px-6 placeholder:text-purple-200 text-white rounded-lg outline-none border-none font-medium'
+            required
           />
         </label>
 
